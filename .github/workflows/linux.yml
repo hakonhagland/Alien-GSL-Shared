@@ -29,23 +29,9 @@ jobs:
             install_type: system
           - tag: "5.36"
             install_type: share
-          - tag: "5.35"
-            install_type: system
-          - tag: "5.35"
-            install_type: share
           - tag: "5.34"
             install_type: system
           - tag: "5.34"
-            install_type: share
-          - tag: "5.34-fedora34"
-            install_type: system
-          - tag: "5.34-centos7"
-            install_type: system
-          - tag: "5.34-centos7"
-            install_type: share
-          - tag: "5.34-centos8"
-            install_type: system
-          - tag: "5.34-centos8"
             install_type: share
           - tag: "5.32"
             install_type: system

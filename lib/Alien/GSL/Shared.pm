@@ -1,10 +1,10 @@
-package Alien::GSL;
+package Alien::GSL::Shared;
 
 use strict;
 use warnings;
 use 5.008001;
 
-our $VERSION = '1.07';
+our $VERSION = '1.00';
 
 use base 'Alien::Base';
 
@@ -12,17 +12,17 @@ use base 'Alien::Base';
 
 =head1 NAME
 
-Alien::GSL - Easy installation of the GSL library
+Alien::GSL::Shared - Easy installation of the GSL library
 
 =head1 SYNOPSIS
 
   # Build.PL
-  use Alien::GSL;
+  use Alien::GSL::Shared;
   use Module::Build 0.28; # need at least 0.28
 
   my $builder = Module::Build->new(
     configure_requires => {
-      'Alien::GSL' => '1.00', # first Alien::Base-based release
+      'Alien::GSL::Shared' => '1.00', # first release
     },
     ...
     extra_compiler_flags => Alien::GSL->cflags,
@@ -36,7 +36,7 @@ Alien::GSL - Easy installation of the GSL library
   # lib/MyLibrary/GSL.pm
   package MyLibrary::GSL;
 
-  use Alien::GSL; # dynaload gsl
+  use Alien::GSL::Shared; # dynaload gsl
 
   ...
 
@@ -46,15 +46,12 @@ Provides the Gnu Scientific Library (GSL) for use by Perl modules, installing it
 This module relies heavily on the L<Alien::Base> system to do so.
 To avoid documentation skew, the author asks the reader to learn about the capabilities provided by that module rather than repeating them here.
 
-=head1 COMPATIBILITY
-
-Since version 1.00, L<Alien::GSL> relies on L<Alien::Base>.
-Releases before that version warned about alpha stability and therefore no compatibility has been provided.
-There were no reverse dependencies on CPAN at the time of the change.
-
-From version 1.00, compability is provided by the L<Alien::Base> project itself which is quite concerned about keeping stability.
-Future versions are expected to maintain compatibilty and failure to do so is to be considered a bug.
-Of course this does not apply to the GSL library itself, though the author expects that the GNU project will provide the compatibility guarantees for that library as well.
+The difference between this module and L<Alien::GSL>
+is that this module will download and install a shared version of the GSL library,
+whereas C<Alien::GSL> will install a static version of the GSL library.
+The shared version is needed by L<Math::GSL>,
+see L<Alien::GSL-#17|https://github.com/PerlAlien/Alien-GSL/issues/17>.
+It will also reduce the size of the generated Perl XS libraries (C<.so>, C<.xs.dll>).
 
 =head1 SEE ALSO
 
@@ -84,7 +81,13 @@ L<https://github.com/PerlAlien/Alien-GSL>
 
 =head1 AUTHOR
 
-Joel Berger, E<lt>joel.a.berger@gmail.comE<gt>
+=over 4
+
+=item Joel Berger, E<lt>joel.a.berger@gmail.comE<gt>
+
+=item Håkon Hægland, E<lt>hakon.hagland@gmail.comE<gt>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

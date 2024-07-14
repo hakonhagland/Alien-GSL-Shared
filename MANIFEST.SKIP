@@ -1,20 +1,6 @@
-
-#!start included /Users/joel/perl5/perlbrew/perls/perl-5.18.4/lib/site_perl/5.18.4/ExtUtils/MANIFEST.SKIP
 # Avoid version control files.
-\bRCS\b
-\bCVS\b
-\bSCCS\b
-,v$
-\B\.svn\b
 \B\.git\b
 \B\.gitignore\b
-\b_darcs\b
-\B\.cvsignore$
-
-# Avoid VMS specific MakeMaker generated files
-\bDescrip.MMS$
-\bDESCRIP.MMS$
-\bdescrip.mms$
 
 # Avoid Makemaker generated and utility files.
 \bMANIFEST\.bak
@@ -24,15 +10,6 @@
 \bpm_to_blib\.ts$
 \bpm_to_blib$
 \bblibdirs\.ts$         # 6.18 through 6.25 generated this
-
-# Avoid Module::Build generated and utility files.
-\bBuild$
-\b_build/
-\b_alien/
-\bBuild.bat$
-\bBuild.COM$
-\bBUILD.COM$
-\bbuild.com$
 
 # Avoid temp and backup files.
 ~$
@@ -65,17 +42,8 @@
 # Avoid configuration metadata file
 ^MYMETA\.
 
-# Avoid Module::Build generated and utility files.
-\bBuild$
-\bBuild.bat$
-\b_build
-\bBuild.COM$
-\bBUILD.COM$
-\bbuild.com$
-^MANIFEST\.SKIP
-
 # Avoid archives of this distribution
-\bAlien-GSL-[\d\.\_]+
+\bAlien-GSL-Shared-[\d\.\_]+
 
-# Avoid README.pod intented for github
-\bREADME\.pod
+# Avoid README.md intented for github
+\bREADME\.md

@@ -3,7 +3,7 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "Easy installation of the GSL library",
+  "ABSTRACT" => "Easy installation of the GSL shared library",
   "AUTHOR" => "Joel A. Berger <joel.a.berger\@gmail.com>",
   "BUILD_REQUIRES" => {
     "Alien::Build" => "2.21",
@@ -15,9 +15,9 @@ my %WriteMakefileArgs = (
     "Alien::Build::MM" => "2.21",
     "ExtUtils::MakeMaker" => "6.52"
   },
-  "DISTNAME" => "Alien-GSL",
+  "DISTNAME" => "Alien-GSL-Shared",
   "LICENSE" => "perl",
-  "NAME" => "Alien::GSL",
+  "NAME" => "Alien::GSL::Shared",
   "PREREQ_PM" => {
     "Alien::Base" => "2.21",
   },
@@ -27,7 +27,7 @@ my %WriteMakefileArgs = (
     "Test::Alien" => 0,
     "Test::Alien::Diag" => 0,
   },
-  "VERSION_FROM" => "lib/Alien/GSL.pm",
+  "VERSION_FROM" => "lib/Alien/GSL/Shared.pm",
   "test" => {
     "TESTS" => "t/*.t"
   },
@@ -36,13 +36,13 @@ my %WriteMakefileArgs = (
     'meta-spec' => { version => 2 },
     resources => {
       bugtracker => {
-        web  => 'https://github.com/PerlAlien/Alien-GSL/issues',
+        web  => 'https://github.com/hakonhagland/Alien-GSL-Shared/issues',
       },
-      homepage => 'https://metacpan.org/pod/Alien::GSL',
+      homepage => 'https://metacpan.org/pod/Alien::GSL::Shared',
       repository => {
         type => 'git',
-        url  => 'https://github.com/PerlAlien/Alien-GSL.git',
-        web  => 'https://github.com/PerlAlien/Alien-GSL',
+        url  => 'https://github.com/hakonhagland/Alien-GSL-Shared.git',
+        web  => 'https://github.com/hakonhagland/Alien-GSL-Shared',
       },
       x_IRC => "irc://irc.perl.org/#native",
     },

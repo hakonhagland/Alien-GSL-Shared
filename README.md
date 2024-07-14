@@ -1,21 +1,21 @@
 # NAME
 
-Alien::GSL - Easy installation of the GSL library
+Alien::GSL::Shared - Easy installation of the GSL library (shared version)
 
 # SYNOPSIS
 
 ```perl
 # Build.PL
-use Alien::GSL;
+use Alien::GSL::Shared;
 use Module::Build 0.28; # need at least 0.28
 
 my $builder = Module::Build->new(
   configure_requires => {
-    'Alien::GSL' => '1.00', # first Alien::Base-based release
+    'Alien::GSL::Shared' => '1.00', # first release
   },
   ...
-  extra_compiler_flags => Alien::GSL->cflags,
-  extra_linker_flags   => Alien::GSL->libs,
+  extra_compiler_flags => Alien::GSL::Shared->cflags,
+  extra_linker_flags   => Alien::GSL::Shared->libs,
   ...
 );
 
@@ -25,7 +25,7 @@ $builder->create_build_script;
 # lib/MyLibrary/GSL.pm
 package MyLibrary::GSL;
 
-use Alien::GSL; # dynaload gsl
+use Alien::GSL::Shared; # dynaload gsl
 
 ...
 ```
@@ -36,15 +36,8 @@ Provides the Gnu Scientific Library (GSL) for use by Perl modules, installing it
 This module relies heavily on the [Alien::Base](https://metacpan.org/pod/Alien%3A%3ABase) system to do so.
 To avoid documentation skew, the author asks the reader to learn about the capabilities provided by that module rather than repeating them here.
 
-# COMPATIBILITY
-
-Since version 1.00, [Alien::GSL](https://metacpan.org/pod/Alien%3A%3AGSL) relies on [Alien::Base](https://metacpan.org/pod/Alien%3A%3ABase).
-Releases before that version warned about alpha stability and therefore no compatibility has been provided.
-There were no reverse dependencies on CPAN at the time of the change.
-
-From version 1.00, compability is provided by the [Alien::Base](https://metacpan.org/pod/Alien%3A%3ABase) project itself which is quite concerned about keeping stability.
-Future versions are expected to maintain compatibilty and failure to do so is to be considered a bug.
-Of course this does not apply to the GSL library itself, though the author expects that the GNU project will provide the compatibility guarantees for that library as well.
+The difference between this module and [Alien::GSL](https://metacpan.org/pod/Alien::GSL)
+is that this module will download and install a shared version of the GSL library, whereas `Alien::GSL` will install a static version of the GSL library. The shared version is needed by `Math::GSL`, see [Alien::GSL-#17](https://github.com/PerlAlien/Alien-GSL/issues/17). It will also reduce the size of the generated Perl XS libraries (`.so`, `.xs.dll`).
 
 # SEE ALSO
 
@@ -53,13 +46,10 @@ Of course this does not apply to the GSL library itself, though the author expec
 - [PerlGSL](https://metacpan.org/pod/PerlGSL)
 - [Math::GSL](https://metacpan.org/pod/Math%3A%3AGSL)
 
-# SOURCE REPOSITORY
+# AUTHORS
 
-[https://github.com/PerlAlien/Alien-GSL](https://github.com/PerlAlien/Alien-GSL)
-
-# AUTHOR
-
-Joel Berger, <joel.a.berger@gmail.com>
+- Joel Berger, <joel.a.berger@gmail.com>
+- Håkon Hægland, <hakon.hagland@gmail.com>
 
 # COPYRIGHT AND LICENSE
 

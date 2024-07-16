@@ -10,9 +10,6 @@ share {
     prefer => 1,
   );
   plugin Extract => 'tar.gz';
-  build [
-    [ './configure --prefix=%{.install.prefix} --with-pic --enable-shared --disable-static' ],
-    [ '%{make}' ],
-    [ '%{make} install' ],
-  ];
+  plugin 'Build::Autoconf';
+  plugin 'Gather::Dino';
 };

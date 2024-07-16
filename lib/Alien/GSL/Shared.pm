@@ -7,6 +7,9 @@ use 5.008001;
 our $VERSION = '1.00';
 
 use base 'Alien::Base';
+use Role::Tiny::With qw( with );
+
+with 'Alien::Role::Dino';
 
 1;
 

@@ -20,6 +20,7 @@ my %WriteMakefileArgs = (
   "NAME" => "Alien::GSL::Shared",
   "PREREQ_PM" => {
     "Alien::Base" => "2.21",
+    "Alien::Role::Dino" => 0,
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.52",

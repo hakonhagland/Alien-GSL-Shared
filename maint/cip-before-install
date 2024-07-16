@@ -26,4 +26,4 @@ else
   echo use internet GSL
 fi
 
-cip exec cpanm -n Alien::Build Alien::Build::MM
+cip exec cpanm -n Alien::Build Alien::Build::MM Alien::Role::Dino

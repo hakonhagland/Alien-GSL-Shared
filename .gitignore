@@ -1,6 +1,5 @@
-MANIFEST
 *\.bak
-*META*
+MYMETA.*
 blib/*
 share_dir/*/*
 Alien-GSL-Shared-*\.tar\.gz

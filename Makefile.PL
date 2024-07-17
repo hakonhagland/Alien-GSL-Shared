@@ -15,7 +15,7 @@ my %WriteMakefileArgs = (
     "Alien::Build::MM" => "2.21",
     "ExtUtils::MakeMaker" => "6.52"
   },
-  "DISTNAME" => "Alien-GSL-Shared",
+  "DISTNAME" => "Math-GSL-Alien",
   "LICENSE" => "perl",
   "NAME" => "Math::GSL::Alien",
   "PREREQ_PM" => {
@@ -28,7 +28,7 @@ my %WriteMakefileArgs = (
     "Test::Alien" => 0,
     "Test::Alien::Diag" => 0,
   },
-  "VERSION_FROM" => "lib/Alien/GSL/Shared.pm",
+  "VERSION_FROM" => "lib/Math/GSL/Alien.pm",
   "test" => {
     "TESTS" => "t/*.t"
   },
@@ -37,13 +37,13 @@ my %WriteMakefileArgs = (
     'meta-spec' => { version => 2 },
     resources => {
       bugtracker => {
-        web  => 'https://github.com/hakonhagland/Alien-GSL-Shared/issues',
+        web  => 'https://github.com/hakonhagland/Math-GSL-Alien/issues',
       },
       homepage => 'https://metacpan.org/pod/Math::GSL::Alien',
       repository => {
         type => 'git',
-        url  => 'https://github.com/hakonhagland/Alien-GSL-Shared.git',
-        web  => 'https://github.com/hakonhagland/Alien-GSL-Shared',
+        url  => 'https://github.com/hakonhagland/Math-GSL-Alien.git',
+        web  => 'https://github.com/hakonhagland/Math-GSL-Alien',
       },
       x_IRC => "irc://irc.perl.org/#native",
     },

@@ -43,7 +43,7 @@
 ^MYMETA\.
 
 # Avoid archives of this distribution
-\bAlien-GSL-Shared-[\d\.\_]+
+\bMath-GSL-Alien-[\d\.\_]+
 
 # Avoid README.md intented for github
 \bREADME\.md

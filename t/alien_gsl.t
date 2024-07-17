@@ -1,8 +1,8 @@
 use Test2::V0 -no_srand => 1;
 use Test::Alien;
-use Alien::GSL::Shared;
+use Math::GSL::Alien;
 
-alien_ok 'Alien::GSL::Shared';
+alien_ok 'Math::GSL::Alien';
 
 my $xs = do { local $/; <DATA> };
 xs_ok { verbose => 2, xs => $xs }, with_subtest {

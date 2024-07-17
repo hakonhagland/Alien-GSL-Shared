@@ -1,4 +1,4 @@
-package Alien::GSL::Shared;
+package Math::GSL::Alien;
 
 use strict;
 use warnings;
@@ -15,17 +15,17 @@ with 'Alien::Role::Dino';
 
 =head1 NAME
 
-Alien::GSL::Shared - Easy installation of the GSL library
+Math::GSL::Alien - Easy installation of the GSL library
 
 =head1 SYNOPSIS
 
   # Build.PL
-  use Alien::GSL::Shared;
+  use Math::GSL::Alien;
   use Module::Build 0.28; # need at least 0.28
 
   my $builder = Module::Build->new(
     configure_requires => {
-      'Alien::GSL::Shared' => '1.00', # first release
+      'Math::GSL::Alien' => '1.00', # first release
     },
     ...
     extra_compiler_flags => Alien::GSL->cflags,
@@ -39,7 +39,7 @@ Alien::GSL::Shared - Easy installation of the GSL library
   # lib/MyLibrary/GSL.pm
   package MyLibrary::GSL;
 
-  use Alien::GSL::Shared; # dynaload gsl
+  use Math::GSL::Alien; # dynaload gsl
 
   ...
 

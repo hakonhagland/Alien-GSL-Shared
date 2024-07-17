@@ -17,7 +17,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Alien-GSL-Shared",
   "LICENSE" => "perl",
-  "NAME" => "Alien::GSL::Shared",
+  "NAME" => "Math::GSL::Alien",
   "PREREQ_PM" => {
     "Alien::Base" => "2.21",
     "Alien::Role::Dino" => 0,
@@ -39,7 +39,7 @@ my %WriteMakefileArgs = (
       bugtracker => {
         web  => 'https://github.com/hakonhagland/Alien-GSL-Shared/issues',
       },
-      homepage => 'https://metacpan.org/pod/Alien::GSL::Shared',
+      homepage => 'https://metacpan.org/pod/Math::GSL::Alien',
       repository => {
         type => 'git',
         url  => 'https://github.com/hakonhagland/Alien-GSL-Shared.git',

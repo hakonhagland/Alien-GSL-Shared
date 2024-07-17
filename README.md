@@ -1,21 +1,21 @@
 # NAME
 
-Alien::GSL::Shared - Easy installation of the GSL library (shared version)
+Math::GSL::Alien - Easy installation of the GSL library (shared version)
 
 # SYNOPSIS
 
 ```perl
 # Build.PL
-use Alien::GSL::Shared;
+use Math::GSL::Alien;
 use Module::Build 0.28; # need at least 0.28
 
 my $builder = Module::Build->new(
   configure_requires => {
-    'Alien::GSL::Shared' => '1.00', # first release
+    'Math::GSL::Alien' => '1.00', # first release
   },
   ...
-  extra_compiler_flags => Alien::GSL::Shared->cflags,
-  extra_linker_flags   => Alien::GSL::Shared->libs,
+  extra_compiler_flags => Math::GSL::Alien->cflags,
+  extra_linker_flags   => Math::GSL::Alien->libs,
   ...
 );
 
@@ -25,7 +25,7 @@ $builder->create_build_script;
 # lib/MyLibrary/GSL.pm
 package MyLibrary::GSL;
 
-use Alien::GSL::Shared; # dynaload gsl
+use Math::GSL::Alien; # dynaload gsl
 
 ...
 ```

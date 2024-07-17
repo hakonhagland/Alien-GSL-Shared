@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use 5.008001;
 
-our $VERSION = '1.02';
+our $VERSION = '1.03';
 
 use base 'Alien::Base';
 use Role::Tiny::With qw( with );

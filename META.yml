@@ -5,6 +5,7 @@ author:
 build_requires:
   Alien::Build: '2.21'
   Alien::Build::MM: '2.21'
+  Alien::Role::Dino: '0'
   ExtUtils::MakeMaker: '6.52'
   Test2::V0: '0'
   Test::Alien: '0'
@@ -27,13 +28,12 @@ no_index:
 requires:
   Alien::Base: '2.21'
   Alien::Build: '0.25'
-  Alien::Role::Dino: '0'
 resources:
   IRC: irc://irc.perl.org/#native
   bugtracker: https://github.com/hakonhagland/Math-GSL-Alien/issues
   homepage: https://metacpan.org/pod/Math::GSL::Alien
   repository: https://github.com/hakonhagland/Math-GSL-Alien.git
-version: '1.00'
+version: '1.02'
 x_alienfile:
   generated_by: 'Alien::Build::MM version 2.83'
   requires:

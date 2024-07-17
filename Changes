@@ -1,5 +1,8 @@
 Revision history for Perl module Math::GSL::Alien.
 
+1.02 2024-07-17
+    - Moved Alien::Roloe::Dino prereq from runtime to build time
+
 1.01 Renamed to Math::GSL::Alien
 
 1.00 First version
